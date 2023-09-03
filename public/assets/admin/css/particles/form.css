@@ -1,0 +1,38 @@
+form {
+    background-color: #F0F5F9;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 16px;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.23);
+    margin-top: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+input, textarea, select {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+input:focus {
+    border: 1px solid black;
+}
+
+.form-text {
+    font-size: 13px;
+    padding: 10px 0;
+    color: #bdb9b9;
+}
+
+
+
+
+
+

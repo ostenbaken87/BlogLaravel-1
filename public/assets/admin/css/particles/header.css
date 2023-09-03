@@ -1,0 +1,51 @@
+header {
+    background-color: #C9D6DF;
+}
+
+.header_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 16px 0;
+}
+
+.header_navbar_logo {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+
+.header_navbar_logo_icon {
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: #F0F5F9;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_navbar_logo_icon i{
+    font-size: 30px;
+}
+
+.header_navbar_logo_brand {
+    padding: 0 16px;
+    font-weight: 700;
+}
+
+.header_navbar_links {
+    display: flex;
+}
+
+.header_navbar_links_link {
+    padding: 0 16px;
+    font-weight: bold;
+}
+
+.header_navbar_links_link a:hover {
+    color: #F0F5F9;
+    transition: all 0.5s;
+}
