@@ -16,7 +16,7 @@
         <div class="header_navbar wrapper_content">
             <div class="header_navbar_logo">
                 <div class="header_navbar_logo_icon">
-                    <i class="fas fa-ghost"></i>
+                    <i class="fas fa-hammer"></i>
                 </div>
                 <div class="header_navbar_logo_brand">
                     <a href="#">AdminPanel</a>
