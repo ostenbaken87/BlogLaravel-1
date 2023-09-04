@@ -11,12 +11,12 @@
                     Categories :
                 </div>
                 <div class="card_look">
-                    <a href="show_categories.html">
+                    <a href="{{route('categories.index')}}">
                         <i class="fas fa-eye"></i>
                     </a>
                 </div>
                 <div class="card_edit">
-                    <a href="create_categories.html">
+                    <a href="{{ route('categories.create') }}">
                         <i class="fas fa-plus"></i>
                     </a>
                 </div>

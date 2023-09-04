@@ -19,7 +19,7 @@
                     <i class="fas fa-hammer"></i>
                 </div>
                 <div class="header_navbar_logo_brand">
-                    <a href="#">AdminPanel</a>
+                    <a href="{{ route('index') }}">AdminPanel</a>
                 </div>
             </div>
             <div class="header_navbar_links">
@@ -27,7 +27,7 @@
                     <a href="index.html">Home</a>
                 </div>
                 <div class="header_navbar_links_link">
-                    <a href="show_categories.html">Categories</a>
+                    <a href="{{ route('categories.index') }}">Categories</a>
                 </div>
                 <div class="header_navbar_links_link">
                     <a href="show_tags.html">Tags</a>

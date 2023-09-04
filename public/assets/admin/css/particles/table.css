@@ -28,6 +28,10 @@ table .fa-eye {
     color: green;
 }
 
+table .fa-pencil-alt {
+    color: blue;
+}
+
 table img {
     width: 150px;
     height: auto;

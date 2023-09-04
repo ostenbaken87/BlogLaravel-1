@@ -103,3 +103,8 @@ h1 {
 .btn-delete:hover {
     color: #F0F5F9;
 }
+
+.not_found {
+    margin-top: 20px;
+    font-weight: bold;
+}
