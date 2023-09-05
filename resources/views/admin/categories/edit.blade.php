@@ -4,7 +4,7 @@
     <div class="main_create wrapper_content">
         <div class="main_header">
             <div class="main_title">
-                <h1>Create Categories</h1>
+                <h1>Edit {{$category->title}}</h1>
                 <i class="fas fa-th-list"></i>
             </div>
             <div class="main_back">
@@ -14,8 +14,9 @@
             </div>
         </div>
         <div class="main_form">
-            <form role="form" method="post" action="{{ route('categories.store') }}">
+            <form role="form" method="post" action="{{ route('categories.update', ['category' => $category->id]) }}">
                 @csrf
+                @method('PATCH')
                 <label for="title"
                        class="form-label">
                     Name category
@@ -25,16 +26,17 @@
                     type="text"
                     name="title"
                     class="form-control @error('title') is-invalid @enderror"
-                    placeholder="Enter the category name"
+                    value="{{$category->title}}"
                 >
                 @error('title')
                 <div class="alert-danger">{{ $message }}<i class="fas fa-exclamation-circle"></i></div>
                 @enderror
 
                 <button type="submit" class="btn_create">
-                    Create
+                    Update
                 </button>
             </form>
         </div>
     </div>
 @endsection
+

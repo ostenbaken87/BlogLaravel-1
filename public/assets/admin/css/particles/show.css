@@ -8,7 +8,7 @@
 .main_post_image,
 .main_post_category,
 .main_post_tags{
-    display: flex;
+    display: inline-flex;
     background-color: #F0F5F9;
     border-radius: 8px;
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.23);

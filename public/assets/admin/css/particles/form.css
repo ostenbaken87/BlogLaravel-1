@@ -1,3 +1,7 @@
+.main_form {
+    display: inline-flex;
+}
+
 form {
     background-color: #F0F5F9;
     display: grid;

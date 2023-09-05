@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class CategoryController extends Controller
 {
@@ -22,44 +24,48 @@ class CategoryController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'title' => ['required', 'max:255']
+            'title' => ['required','unique:categories', 'max:255']
         ]);
         Category::create($request->all());
         return redirect()->route('categories.index')->with('success','Category created');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+
+    public function show(Category $category): View
     {
-        //
+        return view('admin.categories.show', compact('category'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+
+    public function edit($id): View
     {
-        //
+        $category = Category::query()->find($id);
+        return view('admin.categories.edit',compact('category'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+
+    public function update(Request $request, $id): RedirectResponse
     {
-        //
+        $request->validate([
+            'title' => ['required','unique:categories'],
+        ]);
+
+        $category = Category::query()->find($id);
+        $category->update($request->all());
+        return redirect()->route('categories.index')->with('success', 'Update saved');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+
+    public function destroy($id)
     {
-        //
+        $category = Category::query()->find($id);
+        if ($category->posts->count()) {
+            return redirect()->route('categories.index')->with('error', 'Error! Category have posts');
+        }
+        $category->delete();
+        return redirect()->route('categories.index')->with('success', 'Category deleted');
     }
 }

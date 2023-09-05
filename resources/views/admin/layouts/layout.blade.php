@@ -50,6 +50,11 @@
         </div>
     </header>
     <main class="main">
+        @if (session()->has('success'))
+            <div class="alert-success wrapper_content">
+                {{ session('success') }}
+            </div>
+        @endif
         @yield('content')
     </main>
     <footer class="footer">

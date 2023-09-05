@@ -76,12 +76,17 @@ h1 {
 
 .btn_create,
 .btn-edit,
-.btn-delete {
+.btn-delete,
+.btn-delete-show {
     padding: 10px;
     background-color: #bdb9b9;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+}
+
+.btn_create {
+    grid-column: 2/3;
 }
 
 .btn_create:hover {
@@ -96,6 +101,7 @@ h1 {
     color: #F0F5F9;
 }
 
+.btn-delete-show,
 .btn-delete {
     background-color: #EA5455;
 }
@@ -104,7 +110,28 @@ h1 {
     color: #F0F5F9;
 }
 
+.btn-delete-items {
+    cursor: pointer;
+}
+
 .not_found {
     margin-top: 20px;
     font-weight: bold;
+}
+
+.alert-danger {
+    color: red;
+    font-weight: bold;
+}
+
+.alert-success {
+    width: 25%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: aquamarine;
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px 0 rgba(0,0,0,0.23);
 }
