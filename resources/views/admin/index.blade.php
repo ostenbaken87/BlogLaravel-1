@@ -31,12 +31,12 @@
                     Tags :
                 </div>
                 <div class="card_look">
-                    <a href="show_tags.html">
+                    <a href="{{route('tags.index')}}">
                         <i class="fas fa-eye"></i>
                     </a>
                 </div>
                 <div class="card_edit">
-                    <a href="create_tags.html">
+                    <a href="{{ route('tags.create') }}">
                         <i class="fas fa-plus"></i>
                     </a>
                 </div>

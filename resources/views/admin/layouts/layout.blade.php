@@ -24,13 +24,13 @@
             </div>
             <div class="header_navbar_links">
                 <div class="header_navbar_links_link">
-                    <a href="index.html">Home</a>
+                    <a href="{{route('index')}}">Home</a>
                 </div>
                 <div class="header_navbar_links_link">
                     <a href="{{ route('categories.index') }}">Categories</a>
                 </div>
                 <div class="header_navbar_links_link">
-                    <a href="show_tags.html">Tags</a>
+                    <a href="{{ route('tags.index') }}">Tags</a>
                 </div>
                 <div class="header_navbar_links_link">
                     <a href="show_posts.html">Posts</a>
@@ -65,5 +65,11 @@
         </div>
     </footer>
 </div>
+<script src="{{asset('assets/admin/js/jquery.slim.min.js')}}"></script>
+{{--<script>--}}
+{{--    $(function () {--}}
+{{--        $('.select2').select2()--}}
+{{--    });--}}
+{{--</script>--}}
 </body>
 </html>

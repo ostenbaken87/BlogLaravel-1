@@ -30,7 +30,9 @@ class CategoryController extends Controller
             'title' => ['required','unique:categories', 'max:255']
         ]);
         Category::create($request->all());
-        return redirect()->route('categories.index')->with('success','Category created');
+        return redirect()
+            ->route('categories.index')
+            ->with('success','Category created');
     }
 
 
@@ -55,7 +57,9 @@ class CategoryController extends Controller
 
         $category = Category::query()->find($id);
         $category->update($request->all());
-        return redirect()->route('categories.index')->with('success', 'Update saved');
+        return redirect()
+            ->route('categories.index')
+            ->with('success', 'Update saved');
     }
 
 
@@ -63,9 +67,13 @@ class CategoryController extends Controller
     {
         $category = Category::query()->find($id);
         if ($category->posts->count()) {
-            return redirect()->route('categories.index')->with('error', 'Error! Category have posts');
+            return redirect()
+                ->route('categories.index')
+                ->with('error', 'Error! Category have posts');
         }
         $category->delete();
-        return redirect()->route('categories.index')->with('success', 'Category deleted');
+        return redirect()
+            ->route('categories.index')
+            ->with('success', 'Category deleted');
     }
 }

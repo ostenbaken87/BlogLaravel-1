@@ -12,6 +12,11 @@
                     <i class="fas fa-angle-double-left"></i>
                 </a>
             </div>
+            <div class="main_back">
+                <a href="{{ route('categories.index') }}">
+                    <i class="fas fa-angle-left"></i>
+                </a>
+            </div>
         </div>
         <div class="main_form">
             <form role="form" method="post" action="{{ route('categories.update', ['category' => $category->id]) }}">
